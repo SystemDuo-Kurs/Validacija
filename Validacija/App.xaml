@@ -1,0 +1,21 @@
+﻿<Application x:Class="Validacija.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Validacija"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+		<Style TargetType="TextBox" x:Key="stil">
+			<Style.Triggers>
+				<Trigger Property="Validation.HasError" Value="True">
+					<Trigger.Setters>
+						<Setter Property="Background" Value="Red"/>
+						<Setter Property="ToolTip" Value="Greeeska"/>
+					</Trigger.Setters>
+				</Trigger>
+			</Style.Triggers>
+			<Style.Setters>
+				<Setter Property="Background" Value="AliceBlue"/>
+			</Style.Setters>
+		</Style>
+	</Application.Resources>
+</Application>
